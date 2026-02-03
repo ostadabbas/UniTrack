@@ -9,32 +9,32 @@
 
 UniTrack is a **universal loss function** that can be integrated into any Multi-Object Tracking (MOT) framework to improve tracking consistency, reduce identity switches, and enhance overall tracking performance. Our approach has been successfully integrated into **7 different MOT frameworks**, demonstrating its versatility and effectiveness.
 
-## 🚀 Live Demo
+## Live Demo
 
 Visit our showcase website: [https://ostadabbas.github.io/unitrack.github.io](https://ostadabbas.github.io/unitrack.github.io)
 
-## 📋 Table of Contents
+## Table of Contents
 
-- [Key Features](#-key-features)
-- [Quick Start](#-quick-start)
-- [Integration Guide](#-integration-guide)
-- [Supported Frameworks](#-supported-frameworks)
-- [Installation](#-installation)
-- [Usage Examples](#-usage-examples)
-- [Configuration](#-configuration)
-- [Results](#-results)
-- [Citation](#-citation)
+- [Key Features](#key-features)
+- [Quick Start](#quick-start)
+- [Integration Guide](#integration-guide)
+- [Supported Frameworks](#supported-frameworks)
+- [Installation](#installation)
+- [Usage Examples](#usage-examples)
+- [Configuration](#configuration)
+- [Results](#results)
+- [Citation](#citation)
 
-## ✨ Key Features
+## Key Features
 
-- **🔌 Framework-Agnostic**: Seamlessly integrates with any MOT architecture (transformer-based, detection-based, or hybrid)
-- **📊 Three-Component Loss**: Combines tracking score, spatial consistency, and temporal consistency
-- **🎯 Proven Performance**: Successfully tested on 7 different MOT frameworks
-- **⚡ Minimal Overhead**: Efficient implementation with negligible computational cost
-- **🔧 Easy Integration**: Drop-in replacement requiring minimal code changes
-- **📈 Significant Improvements**: Reduces ID switches (IDS) and improves IDF1 scores across all tested frameworks
+- **Framework-Agnostic**: Seamlessly integrates with any MOT architecture (transformer-based, detection-based, or hybrid)
+- **Three-Component Loss**: Combines tracking score, spatial consistency, and temporal consistency
+- **Proven Performance**: Successfully tested on 7 different MOT frameworks
+- **Minimal Overhead**: Efficient implementation with negligible computational cost
+- **Easy Integration**: Drop-in replacement requiring minimal code changes
+- **Significant Improvements**: Reduces ID switches (IDS) and improves IDF1 scores across all tested frameworks
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Standalone Usage
 
@@ -70,7 +70,7 @@ total_loss = loss_dict['loss_unitrack']
 total_training_loss = existing_loss + 1.5 * total_loss
 ```
 
-## 📖 Integration Guide
+## Integration Guide
 
 ### Step 1: Copy the Loss Module
 
@@ -162,7 +162,7 @@ targets = [
 ]
 ```
 
-## 🔧 Supported Frameworks
+## Supported Frameworks
 
 We have successfully integrated UniTrack into the following MOT frameworks:
 
@@ -263,7 +263,7 @@ class MotTrainer(BaseTrainer):
             self.unitrack_weight = opt.unitrack_weight
 ```
 
-## 💻 Installation
+## Installation
 
 ### Prerequisites
 
@@ -306,7 +306,7 @@ cd UT-FairMOT
 pip install -r requirements.txt
 ```
 
-## 📊 Usage Examples
+## Usage Examples
 
 ### Example 1: Basic Integration
 
@@ -396,7 +396,7 @@ def train_one_epoch(model, dataloader, optimizer, unitrack_criterion, device):
     return total_loss / len(dataloader)
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 ### Loss Component Weights
 
@@ -432,7 +432,7 @@ criterion.gamma_switch = torch.tensor(1.5)    # ID switch penalty
 - **Decrease to 0.5-1.0**: For datasets with sparse objects
 - **Monitor components**: Track individual loss components to tune weights
 
-## 📈 Results
+## Results
 
 ### MOT17 Benchmark
 
@@ -461,7 +461,7 @@ criterion.gamma_switch = torch.tensor(1.5)    # ID switch penalty
 - **↓ 2-5% False Positives** reduction
 - **Consistent gains** across different datasets and scenarios
 
-## 🔬 Loss Components Explained
+## Loss Components Explained
 
 ### 1. Tracking Score Loss
 
@@ -485,7 +485,7 @@ Promotes:
 - Penalizes high accelerations (sudden direction changes)
 - Assumes constant velocity within short temporal windows
 
-## 🎯 Best Practices
+## Best Practices
 
 ### 1. Gradual Integration
 
@@ -517,7 +517,7 @@ if batch_idx % 100 == 0:
 - Adjust weights if one component dominates
 - Use early stopping based on IDF1 improvement
 
-## � Troubleshooting
+## Troubleshooting
 
 ### Issue: Loss is NaN
 
@@ -540,7 +540,7 @@ if batch_idx % 100 == 0:
 - Enable gradient clipping
 - Reduce learning rate slightly
 
-## 📚 Citation
+## Citation
 
 If you use UniTrack in your research, please cite:
 
@@ -553,11 +553,11 @@ If you use UniTrack in your research, please cite:
 }
 ```
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! If you've integrated UniTrack into another MOT framework or have improvements, please:
 
@@ -565,14 +565,14 @@ We welcome contributions! If you've integrated UniTrack into another MOT framewo
 2. Create a feature branch
 3. Submit a pull request with detailed description
 
-## 📧 Contact
+## Contact
 
 For questions or issues:
 - Open an issue on GitHub
 - Email: [your-email@domain.com]
 - Project website: [https://ostadabbas.github.io/unitrack.github.io](https://ostadabbas.github.io/unitrack.github.io)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 We thank the authors of the following frameworks for their excellent open-source implementations:
 - GTR, MOTR, TrackFormer, ByteTrack, FairMOT, and others
