@@ -1,0 +1,12 @@
+dataset: mot
+mot_path: data/MOT17
+train_split: mots20_train_coco
+val_split: mots20_train_coco
+
+resume: USER_HOME/ICML/UT-MOTR/models/L_temporal/checkpoint.pth
+masks: true
+lr: 0.00001
+lr_backbone: 0.000001
+
+epochs: 40
+lr_drop: 40

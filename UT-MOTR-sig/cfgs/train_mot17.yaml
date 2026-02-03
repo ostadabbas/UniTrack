@@ -1,0 +1,17 @@
+dataset: mot
+
+train_split: mot17_train_coco
+val_split: mot17_train_cross_val_frame_0_5_to_1_0_coco
+
+mot_path_train: data/MOT17/
+mot_path_val: data/MOT17/
+
+resume: models/mot17_deformable_multi_frame/checkpoint.pth # /work/aclab//trackformer/trackformer_diff_loss_all_comp_02-20-2025/checkpoint.pth # 
+resume_optim: true
+
+num_workers: 4
+
+epochs: 50
+lr_drop: 10
+
+val_interval: 10

@@ -1,0 +1,5 @@
+num_queries: 500
+hidden_dim: 288
+multi_frame_attention: true
+multi_frame_encoding: true
+multi_frame_attention_separate_encoder: true

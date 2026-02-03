@@ -1,0 +1,14 @@
+dataset: mot
+
+train_split: train_half_conf0
+val_split: val_half_conf0
+
+mot_path_train: PROJECT_ROOT/datasets/mot/MOT17/
+mot_path_val: PROJECT_ROOT/datasets/mot/MOT17/
+
+resume: PROJECT_ROOT/models/mot17_deformable_multi_frame_unitrack/checkpoint_epoch_6.pth
+
+epochs: 40
+lr_drop: 10
+
+resume_optim: True

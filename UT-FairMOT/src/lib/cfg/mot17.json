@@ -1,0 +1,15 @@
+{
+    "root":"USER_HOME/data",
+    "train":
+    {
+        "mot17":"./MOT17/train"
+    },
+    "test_emb":
+    {
+        "mot17":"./MOT17/train"
+    },
+    "test":
+    {
+        "mot17":"./MOT17/train"
+    }
+}

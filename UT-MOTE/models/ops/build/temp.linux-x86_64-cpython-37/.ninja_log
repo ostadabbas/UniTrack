@@ -1,0 +1,4 @@
+# ninja log v5
+2	7472	1713290833127455916	/home/author/ondemand/dev/MOTE/models/ops/build/temp.linux-x86_64-cpython-37/home/author/ondemand/dev/MOTE/models/ops/src/cpu/ms_deform_attn_cpu.o	564a5a284aeaca07
+2	24099	1713290849743660424	/home/author/ondemand/dev/MOTE/models/ops/build/temp.linux-x86_64-cpython-37/home/author/ondemand/dev/MOTE/models/ops/src/vision.o	1821e21e33028db8
+2	26077	1713290851728028230	/home/author/ondemand/dev/MOTE/models/ops/build/temp.linux-x86_64-cpython-37/home/author/ondemand/dev/MOTE/models/ops/src/cuda/ms_deform_attn_cuda.o	f5341e3071724a17
